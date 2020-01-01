@@ -1,0 +1,32 @@
+{
+  "name": "Vision Translate - Smart highlight translator",
+  "short_name" : "Vision Translate",
+    "version": "1.1",
+    "description": "A popup translate extension for the visual type.",
+    "manifest_version": 2,
+    "icons":{
+      "128": "icon_128.png",
+      "48": "icon_48.png",
+      "16": "icon_16.png"
+    },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "browser_action": {
+      "default_title": "Vision translate settings",
+      "default_icon": "icon_16.png",
+      "default_popup": "popup.html"
+  },
+  "content_scripts": 
+    [
+        {
+            "matches":["<all_urls>"],
+            "js":["third_party/jquery.js", "script.js"],
+            "run_at": "document_end"
+        }
+    ],
+  "web_accessible_resources": ["translate_popup.html","remind_popup.html","*.svg","*.png"],
+  "manifest_version": 2
+}

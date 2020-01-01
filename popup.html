@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Vision Translate Popup</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<div style="width: 100%; text-align: center;">
+<img src="popup_icon.png" style="display: inline;" /><h2 class="main-txt"> Vision Translate<span class="vers"> 1.1</span></h2><br>
+</div>
+<div class="fromto">
+<h3 style="display: inline;">From</h3>
+<select class="source_lang" id="source_lang" style="display: inline;">
+<option value="auto" class="sl" selected>Detect Language</option>
+<option value="en">English</option>
+<option value="es">Spanish</option>
+<option value="de">German</option>
+<option value="fr">French</option>
+<option value="hu">Hungarian</option>
+<option value="zh-CN">Chinese (Simplified)</option>
+<option value="hi">Hindi</option>
+<option value="af">Afrikaans</option>
+<option value="sq">Albanian</option>
+<option value="am">Amharic</option>
+<option value="ar">Arabic</option>
+<option value="hy">Armenian</option>
+<option value="az">Azerbaijani</option>
+<option value="eu">Basque</option>
+<option value="be">Belarusian</option>
+<option value="bn">Bengali</option>
+<option value="bs">Bosnian</option>
+<option value="bg">Bulgarian</option>
+<option value="my">Burmese</option>
+<option value="ca">Catalan</option>
+<option value="ceb">Cebuano</option>
+<option value="ny">Chichewa</option>
+<option value="zh_TW">Chinese (Traditional)</option>
+<option value="co">Corsican</option>
+<option value="hr">Croatian</option>
+<option value="cs">Czech</option>
+<option value="da">Danish</option>
+<option value="nl">Dutch</option>
+<option value="eo">Esperanto</option>
+<option value="et">Estonian</option>
+<option value="tl">Filipino</option>
+<option value="gl">Galician</option>
+<option value="ka">Georgian</option>
+<option value="el">Greek</option>
+<option value="gu">Gujarati</option>
+<option value="ht">Haitian Creole</option>
+<option value="ha">Hausa</option>
+<option value="haw">Hawaiian</option>
+<option value="iw">Hebrew</option>
+<option value="hmn">Hmong</option>
+<option value="is">Icelandic</option>
+<option value="ig">Igbo</option>
+<option value="id">Indonesian</option>
+<option value="ga">Irish</option>
+<option value="it">Italian</option>
+<option value="ja">Japanese</option>
+<option value="jw">Javanese</option>
+<option value="kn">Kannada</option>
+<option value="kk">Kazakh</option>
+<option value="km">Khmer</option>
+<option value="ko">Korean</option>
+<option value="ku">Kurdish (Kurmanji)</option>
+<option value="ky">Kyrgyz</option>
+<option value="lo">Lao</option>
+<option value="la">Latin</option>
+<option value="lv">Latvian</option>
+<option value="lt">Lithuanian</option>
+<option value="lb">Luxembourgish</option>
+<option value="mk">Macedonian</option>
+<option value="mg">Malagasy</option>
+<option value="ms">Malay</option>
+<option value="ml">Malayalam</option>
+<option value="mt">Maltese</option>
+<option value="mi">Maori</option>
+<option value="mr">Marathi</option>
+<option value="mn">Mongolian</option>
+<option value="ne">Nepali</option>
+<option value="no">Norwegian (Bokmål)</option>
+<option value="ps">Pashto</option>
+<option value="fa">Persian</option>
+<option value="pl">Polish</option>
+<option value="pt">Portuguese</option>
+<option value="pa">Punjabi</option>
+<option value="ro">Romanian</option>
+<option value="ru">Russian</option>
+<option value="sm">Samoan</option>
+<option value="gd">Scots Gaelic</option>
+<option value="sr">Serbian</option>
+<option value="sn">Shona</option>
+<option value="sd">Sindhi</option>
+<option value="si">Sinhala</option>
+<option value="sk">Slovak</option>
+<option value="sl">Slovenian</option>
+<option value="so">Somali</option>
+<option value="su">Sundanese</option>
+<option value="sw">Swahili</option>
+<option value="sv">Swedish</option>
+<option value="tg">Tajik</option>
+<option value="ta">Tamil</option>
+<option value="te">Telugu</option>
+<option value="th">Thai</option>
+<option value="tr">Turkish</option>
+<option value="uk">Ukrainian</option>
+<option value="ur">Urdu</option>
+<option value="uz">Uzbek</option>
+<option value="vi">Vietnamese</option>
+<option value="cy">Welsh</option>
+<option value="fy">Frisian</option>
+<option value="xh">Xhosa</option>
+<option value="yi">Yiddish</option>
+<option value="yo">Yoruba</option>
+<option value="zu">Zulu</option>
+</select>
+<br>
+<h3 style="display: inline;">To</h3>
+<select style="display: inline;" id="target_lang">
+<option value="en" selected>English</option>
+<option value="es">Spanish</option>
+<option value="de">German</option>
+<option value="fr">French</option>
+<option value="hu">Hungarian</option>
+<option value="zh-CN">Chinese (Simplified)</option>
+<option value="hi">Hindi</option>
+<option value="af">Afrikaans</option>
+<option value="sq">Albanian</option>
+<option value="am">Amharic</option>
+<option value="ar">Arabic</option>
+<option value="hy">Armenian</option>
+<option value="az">Azerbaijani</option>
+<option value="eu">Basque</option>
+<option value="be">Belarusian</option>
+<option value="bn">Bengali</option>
+<option value="bs">Bosnian</option>
+<option value="bg">Bulgarian</option>
+<option value="my">Burmese</option>
+<option value="ca">Catalan</option>
+<option value="ceb">Cebuano</option>
+<option value="ny">Chichewa</option>
+<option value="zh_TW">Chinese (Traditional)</option>
+<option value="co">Corsican</option>
+<option value="hr">Croatian</option>
+<option value="cs">Czech</option>
+<option value="da">Danish</option>
+<option value="nl">Dutch</option>
+<option value="eo">Esperanto</option>
+<option value="et">Estonian</option>
+<option value="tl">Filipino</option>
+<option value="gl">Galician</option>
+<option value="ka">Georgian</option>
+<option value="el">Greek</option>
+<option value="gu">Gujarati</option>
+<option value="ht">Haitian Creole</option>
+<option value="ha">Hausa</option>
+<option value="haw">Hawaiian</option>
+<option value="iw">Hebrew</option>
+<option value="hi">Hindi</option>
+<option value="hmn">Hmong</option>
+<option value="hu">Hungarian</option>
+<option value="is">Icelandic</option>
+<option value="ig">Igbo</option>
+<option value="id">Indonesian</option>
+<option value="ga">Irish</option>
+<option value="it">Italian</option>
+<option value="ja">Japanese</option>
+<option value="jw">Javanese</option>
+<option value="kn">Kannada</option>
+<option value="kk">Kazakh</option>
+<option value="km">Khmer</option>
+<option value="ko">Korean</option>
+<option value="ku">Kurdish (Kurmanji)</option>
+<option value="ky">Kyrgyz</option>
+<option value="lo">Lao</option>
+<option value="la">Latin</option>
+<option value="lv">Latvian</option>
+<option value="lt">Lithuanian</option>
+<option value="lb">Luxembourgish</option>
+<option value="mk">Macedonian</option>
+<option value="mg">Malagasy</option>
+<option value="ms">Malay</option>
+<option value="ml">Malayalam</option>
+<option value="mt">Maltese</option>
+<option value="mi">Maori</option>
+<option value="mr">Marathi</option>
+<option value="mn">Mongolian</option>
+<option value="ne">Nepali</option>
+<option value="no">Norwegian (Bokmål)</option>
+<option value="ps">Pashto</option>
+<option value="fa">Persian</option>
+<option value="pl">Polish</option>
+<option value="pt">Portuguese</option>
+<option value="pa">Punjabi</option>
+<option value="ro">Romanian</option>
+<option value="ru">Russian</option>
+<option value="sm">Samoan</option>
+<option value="gd">Scots Gaelic</option>
+<option value="sr">Serbian</option>
+<option value="sn">Shona</option>
+<option value="sd">Sindhi</option>
+<option value="si">Sinhala</option>
+<option value="sk">Slovak</option>
+<option value="sl">Slovenian</option>
+<option value="so">Somali</option>
+<option value="su">Sundanese</option>
+<option value="sw">Swahili</option>
+<option value="sv">Swedish</option>
+<option value="tg">Tajik</option>
+<option value="ta">Tamil</option>
+<option value="te">Telugu</option>
+<option value="th">Thai</option>
+<option value="tr">Turkish</option>
+<option value="uk">Ukrainian</option>
+<option value="ur">Urdu</option>
+<option value="uz">Uzbek</option>
+<option value="vi">Vietnamese</option>
+<option value="cy">Welsh</option>
+<option value="fy">Frisian</option>
+<option value="xh">Xhosa</option>
+<option value="yi">Yiddish</option>
+<option value="yo">Yoruba</option>
+<option value="zu">Zulu</option>
+</select>
+</div>
+<div class="select-cont">
+<h3 class="is_active">Active on this site </h3>
+<div class="toggle-cont-1">
+<div class="form">
+<input type="checkbox" id="bubble" checked="checked" />
+<label class="bubble" for="bubble"></label>
+</div>
+</div>
+
+<h3 class="image">Show images </h3>
+<div class="toggle-cont-2">
+<div class="form">
+<input type="checkbox" id="bubble2" />
+<label class="bubble2" for="bubble2"></label>
+</div>
+</div>
+</div>
+<div class="propose">
+<a href="mailto:domotor.albert@gmail.com?subject=Visiontranslate change proposal&body=Hi! I'd like to propose the following changes:"><h3>✏️Propose changes</h3></a>
+</div>
+
+</body>
+<style type="text/css">
+.propose a{
+ color:white;
+text-decoration: none; 
+}
+.propose h3:hover{
+transform: scale(1.1);
+}
+.propose h3{
+  transition: 0.3s;
+}
+.propose{
+padding-top: 0.5em;
+padding-bottom: 0.1em; 
+text-align: center;
+}
+option{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  border-radius: 1em;
+}
+.select-cont{
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 1em;
+  padding:0.5em;
+}
+.fromto{
+  width: 100%;
+  text-align: center;
+  height: 6.10em;
+  overflow:hidden;
+  padding-top: 1.2em;
+}
+select{
+  padding:0.3em;
+  background-color: #243548;
+  border:none;
+  border-radius: 2em;
+  color:white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+select:focus{
+  outline: none;
+}
+h3{
+margin:0.5em;
+}
+.toggle-cont-1{
+  transform: scale(0.17);
+  position: absolute;
+  right:0px;
+  top: 8.1em;
+  z-index: 4;
+  width: 280px;
+  height: 130px;
+  overflow: hidden;
+  margin-right: -90px;
+}
+.toggle-cont-2{
+  transform: scale(0.17);
+  position: absolute;
+  right:0px;
+  top: 10.7em;
+  z-index: 4;
+  width: 280px;
+  height: 130px;
+  overflow: hidden;
+  margin-right: -90px;
+}
+.image{
+  display: inline-block;
+}
+  body{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255,255,255);
+    width: 20em;
+    background-color: rgb(0,216,216);
+    background-image: url(popup_bg.png);
+    background-size: cover;
+
+  }
+  .main-txt{
+    font-size: 2em;
+    margin:0;
+    display: inline;
+    position: relative;
+    top:-8px;
+  }
+  .vers{
+    font-size: 0.4em;
+    position: relative;
+    bottom:1.1em;
+  }
+  .thx{
+    font-size: 0.7em;
+    letter-spacing: 5px;
+  }
+  .centerer{
+    width: 100%;
+    text-align: center;
+  }
+
+
+/* toggle switch */
+.form {
+    position: absolute;      top: 50%;      left: 50%;      height: 100px;      
+    padding: 10px 0;
+    width: 260px;      
+    transform: translate3d(-50%,-50%,0);
+}
+.form:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -5px;
+    height: 100%;
+    width: 120px;
+    background-color: #243548;
+    border-radius: 50%;
+    box-shadow: 75px 0 0 #243548, 150px 0 0 #243548;
+}
+.form:after {
+    content: '';
+    position: absolute;
+    top: -94px;
+    left: 70px;
+    height: 100%;
+    width: 120px;
+    background-color: rgb(0,194.4,194.4);
+    border-radius: 50%;
+    box-shadow: 0 188px 0 rgb(0,194.4,194.4);
+}
+
+.form input {
+    position: absolute;
+    left: -9999px;
+}
+.bubble{
+  position:absolute;
+  z-index:2000;
+  top:50%;
+  left:50%;
+  height:100px;
+  width:100px;
+  transform:translate3d(-75%,-50%,0);
+  margin-left:-50px;
+  background:#BBBBBB;
+  border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  border-right: 0px solid #BBBBBB;
+  border-left: 0px solid #BBBBBB;
+  animation: toggle-reverse 2s 1; 
+  cursor: pointer; 
+}
+#bubble:checked + .bubble{
+  animation: toggle 2s 1;  
+  transform:translate3d(75%,-50%,0); 
+ background: #3CCC97;   
+}
+.bubble:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    margin-left: -2px;
+    height: 30px;
+    width: 4px;
+    background: #fff;
+    left: 50%;
+    transform: rotate(45deg);
+    border-radius: 2px;
+    transition: 500ms ease all 1.25s;
+}
+.bubble:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    margin-left: -2px;
+    height: 30px;
+    width: 4px;
+    background: #fff;
+    left: 50%;
+    transform: rotate(-45deg);
+    border-radius: 2px;
+    transition: 500ms ease all 1.25s;
+}
+
+#bubble:checked + .bubble:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    margin-left: 5px;
+    height: 30px;
+    width: 4px;
+    background: #fff;
+    left: 50%;
+    transform: rotate(225deg);
+    border-radius: 2px;
+}
+#bubble:checked + .bubble:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    margin-left: -10px;
+    height: 20px;
+    width: 4px;
+    background: #fff;
+    left: 50%;
+    transform: rotate(-215deg);
+    border-radius: 2px;
+}
+.bubble2{
+  position:absolute;
+  z-index:2000;
+  top:50%;
+  left:50%;
+  height:100px;
+  width:100px;
+  transform:translate3d(-75%,-50%,0);
+  margin-left:-50px;
+  background:#BBBBBB;
+  border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  border-right: 0px solid #BBBBBB;
+  border-left: 0px solid #BBBBBB;
+  animation: toggle-reverse 2s 1; 
+  cursor: pointer; 
+}
+#bubble2:checked + .bubble2{
+  animation: toggle 2s 1;  
+  transform:translate3d(75%,-50%,0); 
+ background: #3CCC97;   
+}
+.bubble2:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    margin-left: -2px;
+    height: 30px;
+    width: 4px;
+    background: #fff;
+    left: 50%;
+    transform: rotate(45deg);
+    border-radius: 2px;
+    transition: 500ms ease all 1.25s;
+}
+.bubble2:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    margin-left: -2px;
+    height: 30px;
+    width: 4px;
+    background: #fff;
+    left: 50%;
+    transform: rotate(-45deg);
+    border-radius: 2px;
+    transition: 500ms ease all 1.25s;
+}
+
+#bubble2:checked + .bubble2:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    margin-left: 5px;
+    height: 30px;
+    width: 4px;
+    background: #fff;
+    left: 50%;
+    transform: rotate(225deg);
+    border-radius: 2px;
+}
+#bubble2:checked + .bubble2:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    margin-left: -10px;
+    height: 20px;
+    width: 4px;
+    background: #fff;
+    left: 50%;
+    transform: rotate(-215deg);
+    border-radius: 2px;
+}
+@keyframes toggle {
+    0%   {
+    transform:translate3d(-75%,-50%,0);
+    border-right: 0 solid #BBBBBB;
+    border-left: 0 solid #BBBBBB;
+    background:#BBBBBB;
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    height: 100px;
+    }
+    20% {
+    border-right: 0 solid #BBBBBB;
+    border-left: 0 solid #BBBBBB;
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    transform:translate3d(-75%,-50%,0);
+    height: 100px;
+    } 
+    40%  {
+    border-left: 0 solid #BBBBBB;
+    border-radius: 35% 65% 65% 35% / 50% 50% 50% 50%;
+    height: 90px;
+    }
+    50%  {
+    transform:translate3d(0%,-50%,0);
+    border-right: 25px solid #BBBBBB;
+    border-left: 0 solid #BBBBBB;
+    background:#BBBBBB;
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    height: 90px;   
+    }
+    75%  {
+    border-left: 25px solid #3CCC97;
+    border-color:#3CCC97;
+    background: #3CCC97;
+    border-radius: 65% 35% 35% 65% / 50% 50% 50% 50%;
+    height: 90px;
+    }
+    100% {
+    border-right: 0 solid #3CCC97;
+    border-left: 0 solid #3CCC97;
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    transform:translate3d(75%,-50%,0);
+    height: 100px;
+    width:100px
+    }
+}
+
+
+@keyframes toggle-reverse {
+    0%   {
+    transform:translate3d(75%,-50%,0);
+    background: #3CCC97;
+    border-right: 0 solid #3CCC97;
+    border-left: 0 solid #3CCC97;
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    height: 100px;
+    }
+    20% {
+    border-right: 0 solid #3CCC97;
+    border-left: 0 solid #3CCC97;
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    transform:translate3d(75%,-50%,0);
+    height: 100px;
+    } 
+    40%  {
+    border-right: 0 solid #3CCC97;
+    border-radius: 65% 35% 35% 65% / 50% 50% 50% 50%;
+    height: 90px;
+    }
+    50%  {
+    transform:translate3d(0%,-50%,0);
+    border-left: 25px solid #3CCC97;
+    border-right: 0 solid #3CCC97;
+    background: #3CCC97;
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    height: 90px;   
+    }
+    75%  {
+    border-right: 25px solid #BBBBBB;
+    border-color:#BBBBBB;
+    background:#BBBBBB;
+    border-radius: 35% 65% 65% 35% / 50% 50% 50% 50%;
+    height: 90px;
+    }
+    100% {
+    border-right: 0 solid #BBBBBB;
+    border-left: 0 solid #BBBBBB;
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    transform:translate3d(-75%,-50%,0);
+    height: 100px;
+    width:100px
+    }
+}
+</style>
+<script src="third_party/jquery.js"></script>
+<script src="popup.js"></script>
+</html>
