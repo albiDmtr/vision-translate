@@ -1,2 +1,3 @@
 # vision-translate
-Chrome extension translator
+All the files of my highlight translator chrome extension.
+Extension can be found at https://chrome.google.com/webstore/detail/vision-translate-smart-hi/aemapjnikiphnefgmocicmlmbdhodkea
