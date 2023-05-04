@@ -7,11 +7,11 @@
 Vision translate is a chrome extension that helps you navigate sites in foreign languages and learning a new language by translating the highlighted text and providing illustrations to make it easier to remember.
 
 ##### What makes it better than other similar extensions?
-• Displays image associated with highlighted word in order to make it easier to learn
-• Asks in popups about frequently translated words
-• Displays context of highlighted text to learn the whole meaning
-• Supports over 100 languages
-• Detailed, intuitive design
+- Displays image associated with highlighted word in order to make it easier to learn
+- Asks in popups about frequently translated words
+- Displays context of highlighted text to learn the whole meaning
+- Supports over 100 languages
+- Detailed, intuitive design
 
 ##### How to get Vision Translate?
 If you use Chrome or Brave, you can download it from the official webstore by Google [HERE](https://chrome.google.com/webstore/detail/vision-translate-smart-hi/aemapjnikiphnefgmocicmlmbdhodkea?hl=en "HERE").
